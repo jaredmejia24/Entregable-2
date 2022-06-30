@@ -10,11 +10,12 @@ const WeatherCard = () => {
     clear: "https://media4.giphy.com/media/u01ioCe6G8URG/giphy.gif",
     cloud: "https://i.gifer.com/origin/dd/ddedd3a2f4a3995d8cd1a8ab2033c9ce.gif",
     rain: "https://c.tenor.com/UkXBmkGcpNEAAAAC/rain-raining.gif",
+    thunderstorm: "https://i.pinimg.com/originals/42/5b/81/425b811084dd2421c1df0fbe7576d883.gif",
+    snow: "https://64.media.tumblr.com/8f8a1a48b69ae147d334edad25564096/tumblr_mmew0okPvR1qh8h77o1_500.gifv",
+    mist: "https://c.tenor.com/Bn54rm_xD18AAAAC/smoke-fog.gif"
   };
   const success = (pos) => {
     const crd = pos.coords;
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&units=metric&appid=0954170f2e2be8248c93abe2cf458a61`
@@ -62,12 +63,7 @@ const WeatherCard = () => {
             </h3>
             <div className="weather-info">
               <div>
-                <span
-                  style={{ fontSize: "7rem", color: "blue" }}
-                  className="material-symbols-outlined"
-                >
-                  cloud
-                </span>
+                <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}></img>
                 <p>
                   <b>
                     {weather.main?.temp}
