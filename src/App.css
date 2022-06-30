@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+ box-sizing: border-box;
+}
+
+.background{
+  background: url("https://i.gifer.com/origin/dd/ddedd3a2f4a3995d8cd1a8ab2033c9ce.gif");
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgb(85, 85, 85); 
+  background-color: rgb(219, 219, 219);
+  border-radius: 15px;
+}
+
+.card button{
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.color-blueviolet{
+  color: blueviolet;
+}
+
+.weather-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
